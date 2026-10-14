@@ -1,0 +1,8 @@
+{
+  "version": "4.9.4",
+  "released": "2026-10-09",
+  "notes": "Two changes.\n\nA panel now holds at most 5 users. Nova is a personal or small-circle proxy on a free Cloudflare account, not a reseller platform, and the cap keeps one account's traffic small. It applies to the panel, the API and the Telegram bot. A panel that already has more than five keeps working and can still edit or delete its users; it simply cannot add another until it is under the limit.\n\nA chain proxy over HTTPS now connects when the server asks for a client certificate without requiring one. The TLS client used to treat that request as fatal, so some HTTPS proxies could never be reached. It now answers with an empty certificate, as a browser would. Ported from cmliu/edgetunnel.",
+  "worker_url": "https://raw.githubusercontent.com/IRNova/Nova-Proxy/main/worker.js",
+  "protected": true,
+  "worker_sha256": "a472cff8198e8ffe40e2ef775ffd94d0f5c617f5af8c3b534d6b36fcb671c215"
+}
